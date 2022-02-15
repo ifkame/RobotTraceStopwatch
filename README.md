@@ -32,17 +32,17 @@
 
 ## ディレクトリ説明
 
-### datasheet
+### [datasheet](https://github.com/ifkame/RobotTraceStopwatch/tree/main/datasheet)
 抵抗の計算、pin配置確認
 
-### コード・配線
+### [コード・配線](https://github.com/ifkame/RobotTraceStopwatch/tree/main/%E3%82%B3%E3%83%BC%E3%83%89%E3%83%BB%E9%85%8D%E7%B7%9A)
 ストップウォッチ内部のコード確認、配線抜けなどのトラブル対応
 
-### パーツリスト
+### [パーツリスト](https://github.com/ifkame/RobotTraceStopwatch/tree/main/%E3%83%91%E3%83%BC%E3%83%84%E3%83%AA%E3%82%B9%E3%83%88)
 部品発注の履歴
 
-### 画像
+### [画像](https://github.com/ifkame/RobotTraceStopwatch/tree/main/%E7%94%BB%E5%83%8F)
 ロボトレース用ストップウォッチに関係する画像
 
-### 説明書
+### [説明書](https://github.com/ifkame/RobotTraceStopwatch/tree/main/%E8%AA%AC%E6%98%8E%E6%9B%B8)
 詳細または理解しやすくなるモノを置く
