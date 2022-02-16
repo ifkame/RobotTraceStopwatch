@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -3024,16 +3024,16 @@ infrared emitting diode, Infineon</description>
 <part name="+3V2" library="0my_lbr" deviceset="+3V3" device=""/>
 <part name="+3V3" library="0my_lbr" deviceset="+3V3" device=""/>
 <part name="+3V4" library="0my_lbr" deviceset="+3V3" device=""/>
-<part name="D1" library="led" deviceset="SFH482" device=""/>
-<part name="D2" library="led" deviceset="SFH482" device=""/>
-<part name="D3" library="led" deviceset="SFH482" device=""/>
-<part name="D4" library="led" deviceset="SFH482" device=""/>
+<part name="FIRST_D1" library="led" deviceset="SFH482" device=""/>
+<part name="FIRST_D2" library="led" deviceset="SFH482" device=""/>
+<part name="LAST_D1" library="led" deviceset="SFH482" device=""/>
+<part name="LAST_D2" library="led" deviceset="SFH482" device=""/>
 <part name="GND1" library="0my_lbr" deviceset="GND" device=""/>
 <part name="GND2" library="0my_lbr" deviceset="GND" device=""/>
 <part name="GND3" library="0my_lbr" deviceset="GND" device=""/>
 <part name="GND4" library="0my_lbr" deviceset="GND" device=""/>
-<part name="T1" library="opto-trans-siemens" deviceset="BPX81" device=""/>
-<part name="T2" library="opto-trans-siemens" deviceset="BPX81" device=""/>
+<part name="LAST_TRANSISTOR" library="opto-trans-siemens" deviceset="BPX81" device=""/>
+<part name="FIRST_TRANSISTOR" library="opto-trans-siemens" deviceset="BPX81" device=""/>
 <part name="+3V5" library="0my_lbr" deviceset="+3V3" device=""/>
 <part name="+3V6" library="0my_lbr" deviceset="+3V3" device=""/>
 <part name="GND5" library="0my_lbr" deviceset="GND" device=""/>
@@ -3061,22 +3061,22 @@ infrared emitting diode, Infineon</description>
 <instance part="+3V2" gate="G$1" x="68.58" y="60.96"/>
 <instance part="+3V3" gate="G$1" x="99.06" y="60.96"/>
 <instance part="+3V4" gate="G$1" x="111.76" y="60.96"/>
-<instance part="D1" gate="1" x="55.88" y="45.72"/>
-<instance part="D2" gate="1" x="68.58" y="45.72"/>
-<instance part="D3" gate="1" x="99.06" y="45.72"/>
-<instance part="D4" gate="1" x="111.76" y="45.72"/>
+<instance part="FIRST_D1" gate="1" x="55.88" y="45.72"/>
+<instance part="FIRST_D2" gate="1" x="68.58" y="45.72"/>
+<instance part="LAST_D1" gate="1" x="99.06" y="45.72"/>
+<instance part="LAST_D2" gate="1" x="111.76" y="45.72"/>
 <instance part="GND1" gate="1" x="55.88" y="38.1"/>
 <instance part="GND2" gate="1" x="68.58" y="38.1"/>
 <instance part="GND3" gate="1" x="99.06" y="38.1"/>
 <instance part="GND4" gate="1" x="111.76" y="38.1"/>
-<instance part="T1" gate="1" x="20.32" y="88.9"/>
-<instance part="T2" gate="1" x="53.34" y="88.9"/>
-<instance part="+3V5" gate="G$1" x="22.86" y="96.52"/>
-<instance part="+3V6" gate="G$1" x="55.88" y="96.52"/>
-<instance part="GND5" gate="1" x="22.86" y="71.12"/>
-<instance part="GND6" gate="1" x="55.88" y="71.12"/>
-<instance part="R5" gate="G$1" x="22.86" y="78.74" rot="R270"/>
-<instance part="R6" gate="G$1" x="55.88" y="78.74" rot="R270"/>
+<instance part="LAST_TRANSISTOR" gate="1" x="7.62" y="88.9"/>
+<instance part="FIRST_TRANSISTOR" gate="1" x="40.64" y="88.9"/>
+<instance part="+3V5" gate="G$1" x="10.16" y="96.52"/>
+<instance part="+3V6" gate="G$1" x="43.18" y="96.52"/>
+<instance part="GND5" gate="1" x="10.16" y="71.12"/>
+<instance part="GND6" gate="1" x="43.18" y="71.12"/>
+<instance part="R5" gate="G$1" x="10.16" y="78.74" rot="R270"/>
+<instance part="R6" gate="G$1" x="43.18" y="78.74" rot="R270"/>
 <instance part="LED1" gate="G$1" x="182.88" y="60.96" rot="R180"/>
 <instance part="R7" gate="G$1" x="142.24" y="60.96" rot="R270"/>
 <instance part="R8" gate="G$1" x="132.08" y="60.96" rot="R270"/>
@@ -3104,53 +3104,53 @@ infrared emitting diode, Infineon</description>
 <pinref part="+3V4" gate="G$1" pin="+3V3"/>
 </segment>
 <segment>
-<pinref part="T1" gate="1" pin="C"/>
+<pinref part="LAST_TRANSISTOR" gate="1" pin="C"/>
 <pinref part="+3V5" gate="G$1" pin="+3V3"/>
 </segment>
 <segment>
-<pinref part="T2" gate="1" pin="C"/>
+<pinref part="FIRST_TRANSISTOR" gate="1" pin="C"/>
 <pinref part="+3V6" gate="G$1" pin="+3V3"/>
 </segment>
 </net>
 <net name="N$1" class="0">
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
-<pinref part="D1" gate="1" pin="A"/>
+<pinref part="FIRST_D1" gate="1" pin="A"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
 <pinref part="R2" gate="G$1" pin="2"/>
-<pinref part="D2" gate="1" pin="A"/>
+<pinref part="FIRST_D2" gate="1" pin="A"/>
 </segment>
 </net>
 <net name="N$3" class="0">
 <segment>
 <pinref part="R3" gate="G$1" pin="2"/>
-<pinref part="D3" gate="1" pin="A"/>
+<pinref part="LAST_D1" gate="1" pin="A"/>
 </segment>
 </net>
 <net name="N$4" class="0">
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
-<pinref part="D4" gate="1" pin="A"/>
+<pinref part="LAST_D2" gate="1" pin="A"/>
 </segment>
 </net>
 <net name="GND" class="0">
 <segment>
-<pinref part="D1" gate="1" pin="C"/>
+<pinref part="FIRST_D1" gate="1" pin="C"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="D2" gate="1" pin="C"/>
+<pinref part="FIRST_D2" gate="1" pin="C"/>
 <pinref part="GND2" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="D3" gate="1" pin="C"/>
+<pinref part="LAST_D1" gate="1" pin="C"/>
 <pinref part="GND3" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="D4" gate="1" pin="C"/>
+<pinref part="LAST_D2" gate="1" pin="C"/>
 <pinref part="GND4" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -3164,12 +3164,12 @@ infrared emitting diode, Infineon</description>
 </net>
 <net name="N$6" class="0">
 <segment>
-<pinref part="T2" gate="1" pin="E"/>
+<pinref part="FIRST_TRANSISTOR" gate="1" pin="E"/>
 <pinref part="U1" gate="G$1" pin="IO15"/>
-<wire x1="55.88" y1="83.82" x2="101.6" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="83.82" x2="101.6" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="83.82" x2="101.6" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="R6" gate="G$1" pin="1"/>
-<junction x="55.88" y="83.82"/>
+<junction x="43.18" y="83.82"/>
 </segment>
 </net>
 <net name="N$11" class="0">
@@ -3283,12 +3283,12 @@ infrared emitting diode, Infineon</description>
 </net>
 <net name="N$5" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="IO12"/>
-<wire x1="68.58" y1="101.6" x2="40.64" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="101.6" x2="40.64" y2="83.82" width="0.1524" layer="91"/>
-<pinref part="T1" gate="1" pin="E"/>
+<wire x1="35.56" y1="104.14" x2="35.56" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="LAST_TRANSISTOR" gate="1" pin="E"/>
 <pinref part="R5" gate="G$1" pin="1"/>
-<wire x1="40.64" y1="83.82" x2="22.86" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="83.82" x2="10.16" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="IO14"/>
+<wire x1="35.56" y1="104.14" x2="68.58" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$22" class="0">
