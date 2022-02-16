@@ -24,9 +24,11 @@
 
 〇コード・配線/zemi_StopWatch/zemi_StopWatch.ino[Arduino]
 
-〇コード・配線/マイクロマウス用ストップウォッチの配線図.fzz
+〇コード・配線/マイクロマウス用ストップウォッチの配線図.fzz[Fritzing]
 
-〇画像/Micro_StopWatch配線(ブレッドボード).png
+〇コード・配線/RobotTraceStopWatch.sch[EAGLE]
+
+〇画像/Micro_StopWatch配線(ブレッドボード).png[PNG]
 
 ---
 
